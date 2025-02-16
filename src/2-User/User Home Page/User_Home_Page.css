@@ -1,0 +1,738 @@
+.my-details-container{
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  padding:50px;
+  display:none;
+  position:fixed;
+  background-color:gray;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.page-contents-div{
+  display:flex;
+  margin-top:20px;
+}
+
+.filter-container-and-side-functionality-container{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  width: 275px;
+  height:auto;
+  margin-left:5px;
+}
+
+.view-favourites-button,.apply-filter-button{
+  display:inline-block;
+  width:250px;
+  padding:5px 10px 5px 10px;
+  border-radius:8px;
+  background-color:#0d853f;
+  color:white;
+  font-family:poppins;
+  margin-top:20px;
+}
+
+.apply-filter-button{
+  width: 100%;
+} 
+
+.view-favourites-button:hover,.apply-filter-button:hover{
+  color:#0d853f;
+  background-color:white;
+  transition:background-color 0.35s;
+  border:1px solid black;
+}
+
+.contact-admin-functionality-container{
+  display:flex;
+  margin-top:50px;
+  width:250px;
+  height:auto;
+  padding:10px 15px;
+  border-radius:10px;
+  flex-direction:column;
+  border:1px solid black;
+}
+.contact-admin-image-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:15px;
+}
+.whatsapp-gmail-text{
+  text-align:center;
+}
+
+.whatsapp-gmail-links-container{
+  margin-top:20px;
+  display:flex;
+  justify-content:space-between;
+}
+.whatsapp-icon,.gmail-icon{
+  height:50px;
+  width:50px;
+}
+.admin-icon{
+  height:40px;
+  width:40px;
+}
+
+
+.filter-container {
+  width: 250px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  display:inline-block;
+  padding:25px;
+  margin:0px;
+  border-radius:10px;
+}
+
+.filter-category {
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+.filter-box {
+  border: 1px solid #d3d3d3;
+  padding: 10px;
+}
+
+.filter-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #c00;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+  align-items:start;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.complete-venues-container-div{
+  display:inline-block;
+  margin:0px 0px 0px 30px;
+  padding:0px;
+}
+
+.venues-container {
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+}
+
+.venue-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height:auto;
+  width: 1200px;
+  transition: transform 0.3s ease;
+  display:flex;
+  position:relative;
+  margin-bottom:15px;
+  border:1px solid red;
+}
+
+.venue-card:hover {
+  /* transform: translateY(-10px); */
+}
+
+.venue-image {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  padding:10px;
+}
+
+.venue-details-container {
+  padding: 20px;
+  color:black;
+  display:inline;
+  width:450px;
+  background-color: white;
+}
+
+.venue-name {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.location-details-container,.contact-details-container,.capacity-details-container,.working-hours-details-container,.veg-plate-details-container,.non-veg-plate-details-container{
+  display:flex;
+  width:100%;
+}
+
+.location-icon,.contact-icon,.group-icon,.working-hours-icon,.veg-icon,.non-veg-icon{
+  width:20px;
+  height:20px;
+  margin-right:5px;
+  margin-bottom:5px;
+}
+
+.venue-address, .venue-rating, .venue-contact {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 8px;
+  display:inline;
+}
+
+.venue-rating {
+  color: #f39c12;
+  font-weight: bold;
+}
+
+.per-plate-price-details-container{
+  width:200px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: end;
+  padding-bottom:18px;
+}
+
+.rating-and-reviews-container{
+  width:225px;
+  position:absolute;
+  right:10px;
+  top:10px;
+  display:flex;
+  align-items:center;
+  justify-content: end;
+}
+
+.reviews-details-container{
+  background-color:#0d853f;
+  margin-left:25px;
+  padding:5px 10px 5px 10px;
+  color:white;
+  cursor: pointer;
+}
+.reviews-details-container p{
+  color:white;
+}
+
+.star-container {
+  position: absolute;
+  right:15px;
+  bottom:15px;
+  display:flex;
+  gap:10px;
+  background-color:lightyellow;
+  padding:5px 10px 5px 10px;
+}
+.star-container-p-element{
+  flex:10;
+}
+
+.star-checkbox {
+  display: none; /* Hide the checkbox */
+  flex:1;
+}
+
+.star-label {
+  cursor: pointer;
+  flex:1;
+}
+
+/* Star shape using CSS */
+.star {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #ccc;
+  clip-path: polygon(
+      50% 0%, 61% 35%, 98% 35%, 
+      68% 57%, 79% 91%, 50% 70%, 
+      21% 91%, 32% 57%, 2% 35%, 
+      39% 35%
+  );
+  transition: background-color 0.3s ease;
+}
+
+/* Change color when checked */
+.star-checkbox:checked + .star-label .star {
+  background-color: gold;
+}
+
+
+
+@media (max-width: 768px) {
+  .venue-card {
+      width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .venue-card {
+      width: 100%;
+  }
+}
+
+.venue-additional-information{
+  margin-top:20px;
+}
+
+
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal h2{
+  text-align:center;
+  padding:5px 0px 5px 0px;
+}
+
+
+.modal-venue-image {
+  border-radius: 10px;
+  text-align:center;
+
+  width: 100%;         /* Make the image take the full width of the parent */
+  height: 100%;        /* Make the image take the full height of the parent */
+}
+
+.modal-content-for-venues {
+  width: 80%;
+  max-width: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  height:95vh;
+  overflow-y: auto; /* Adds a scrollbar if the content exceeds the height */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+}
+
+.venue-image-details-container-individual{
+  display:flex;
+  align-items:center;
+  width:950px;
+
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.venue-image-container img{}
+
+
+.venue-description-for-each-card{
+  text-align:justify;
+  width:950px;
+  border:1px black solid;
+  margin:0 auto;
+  padding:10px;
+}
+
+.venue-information-container {
+  margin-top:25px;
+  padding:0px;
+}
+
+.venue-information-container ul{
+  margin:20px auto;
+  padding-left:30px;
+}
+
+.venue-information-container h2{
+  text-align:center;
+}
+
+
+.button-container{
+  display:flex;
+  justify-content:space-between;
+  margin-top:50px;
+  width: 950px;
+  margin:50px auto 0px auto;
+}
+
+.button-container button {
+  background-color: white; /* Background color for the button */
+  color: black; /* Text color */
+  border: 2px solid black; /* Black border */
+  border-radius: 5px; /* Slightly rounded corners */
+  padding: 10px 20px; /* Vertical and horizontal padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.button-container button:hover {
+  background-color: black; /* Change background to black on hover */
+  color: white; /* Change text color to white on hover */
+}
+
+
+
+
+.cost-info {
+  background-color: #f9f9f9; /* Light background for contrast */
+  border: 1px solid #e0e0e0; /* Border for definition */
+  padding: 15px; /* Adds padding inside the box */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width:80%;
+}
+
+.cost-info-item {
+  font-size: 1.2em; /* Increases font size for visibility */
+  color: #333; /* Dark color for readability */
+}
+
+.cost-value {
+  color: #007bff; /* Highlight color for the cost value */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.venue-container {
+  width: 80%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.venue-section {
+  border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.parking-details, .payment-info-container, .food-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.parking-item, .payment-methods, .food-options {
+  flex: 1 1 30%;
+}
+
+.payment-methods, .food-options {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.payment-item, .food-item {
+  margin-bottom: 5px;
+}
+
+.usps-section .usp-list {
+  padding-left: 20px;
+}
+
+.usps-section .usp-item {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+}
+
+.usps-section .usp-item::before {
+  content: '⭐';
+  position: absolute;
+  left: 0;
+  color: green;
+}
+
+.section-title{
+  margin-bottom:20px;
+}
+
+.section-title i {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.usp-list,.parking-details{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.parking-details{
+  margin-left:25px;
+}
+
+.usp-item{
+  /* flex:1; */
+  flex-basis: calc(33.333% - 10px); /* 3 items per row, minus the gap */
+  flex-grow: 1; /* Optional: This will ensure items grow if needed */
+}
+
+.parking-item{
+  flex-basis: calc(50% - 10px); /* 2 items per row, minus the gap */
+  flex-grow: 1; /* Optional: Allows items to grow if needed */
+}
+
+
+.restaurant-info-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width:950px;
+  margin:0px auto;
+}
+
+.cuisines-section-container, 
+.facilities-section-container {
+  margin-bottom: 20px;
+}
+
+.cuisines-section-title, 
+.facilities-section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cuisines-list-wrapper {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cuisines-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cuisine-item {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.show-more-link {
+  color: #007BFF;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.facilities-list-wrapper {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.facilities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.facility-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #555;
+}
+
+.facility-item.available i {
+  color: green; /* Green color for available facilities */
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.facility-item.not-available i {
+  color: red; /* Red color for not available facilities */
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.facility-item i {
+  font-size: 20px; /* Adjust icon size if needed */
+}
+
+.cuisines-list-wrapper,.facilities-list-wrapper{
+  background-color:lightyellow;
+  border-radius:10px;
+  border:1px solid rgb(159, 154, 11);
+}
+
+.cuisines-list,.facilities-list{
+  padding-left:150px;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.cuisine-item,.facility-item.available,.facility-item.not-available{
+  flex: 1 1 calc(33.33% - 10px); /* Allow each item to grow and shrink, setting a basis of one-third of the container width */
+}
+
+
+/* Section Titles */
+.cuisines-section-title, .facilities-section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* List Wrapper */
+.cuisines-list-wrapper, .facilities-list-wrapper {
+  background-color: #fff8e1;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Cuisine and Facility List Styles */
+.cuisines-list, .facilities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Icons Styles */
+.cuisine-item svg, .facility-item svg {
+  margin-right: 0.5rem;
+  font-size: 1.3rem;
+}
+
+/* Availability Styles */
+.facility-item.available {
+  color: #4CAF50;
+}
+
+.facility-item.not-available {
+  color: #FF5722;
+}
+
+/* Backgrounds and Hover Effects */
+.cuisine-item:hover, .facility-item:hover {
+  background-color: #fff3e0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .cuisines-list, .facilities-list {
+      grid-template-columns: 1fr;
+  }
+}
+.cuisines-section-title{
+  text-align:center;
+  display: inline-block;
+}
+
+.icon-1-container,.icon-2-container{
+  display:inline-block;
+  margin:10px;
+}
+
+.section-title-container{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  margin:10px 0px;
+}
+
+.icon-image{
+  height:50px;
+  width:50px;
+}
+
+.restaurant-info-container{
+  border:1px black solid;
+}
+
+.sort-buttons-container{
+  display: flex;
+  width: 100% ;
+  justify-content: space-between;
+} 
+.new-to-old,.old-to-new,.rating{
+  border:1px solid black;
+  border-radius:5px;
+
+} 
+.new-to-old:hover,.old-to-new:hover,.rating:hover{
+  background-color: black;
+  color: white;
+} 
+
+
+

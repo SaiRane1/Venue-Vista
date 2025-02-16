@@ -1,0 +1,109 @@
+/* WEBSITE HEADER */
+.website-header{
+  display:flex;
+  align-items:center;
+  width:95%;
+  margin:20px auto 0px auto;
+}
+
+.welcome-message{
+  font-size:50px;
+  display:block;
+  text-align:center;
+  display: inline-block;
+}
+
+.my-account{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.booking-history{
+  flex:1;
+  font:bold 15px poppins;
+  color:red;
+}
+
+.website-name-container{
+  flex:6;
+  display:flex;
+  justify-content:center;
+} 
+
+  .website-name-container h2{
+  color:black;
+  font:bold 2em poppins;
+} 
+ 
+.login-button-container,.register-button-container{
+  flex:1;
+  display:flex;
+  justify-content: end;
+}
+
+.login-button,.register-button{
+  padding:5px 10px 5px 10px;
+  border-radius:15px;
+  font:bold 15px poppins;
+  background-color:#01a72b;
+  color:white;
+  border:solid 1px black;
+}
+
+.login-button-container{
+  position:relative;
+} 
+
+.welcome-div{
+  width:auto;
+  margin:15px;
+  border-radius:15px;
+  border:1px red solid;
+  height:575px;
+}
+
+.some-of-our-venues{
+  margin-left:20px;
+}
+
+.welcome-message-container,.information-container{
+  text-align:center;
+  font-family:poppins;
+  font-size:22px;
+  padding:15px 0px;
+}
+
+.information-container{
+  font-size:18px;
+  background-color:lightyellow;
+  margin:15px 15px;
+}
+
+.venue-image-container{
+  display:flex;
+  justify-content:space-between;
+  padding:0px 20px;
+}
+
+.venue-image-container-image{
+  height:250px;
+  border-radius:15px;
+}
+
+.get-started-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:40px 0px;
+}
+
+.get-started{
+  text-align:center;
+  display:inline-block;
+  border-radius:10px;
+  background-color:#0d853f;
+  font-size:18px;
+  color:white;
+  padding:10px 15px;
+}
